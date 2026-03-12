@@ -1,0 +1,1 @@
+SELECT * FROM `dbgabriel`.`produto` LIMIT 1000;
