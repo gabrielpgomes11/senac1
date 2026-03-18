@@ -27,6 +27,11 @@ btn1 = tk.Button(janela, text="Abrir Conversor", width=20,
                  command=lambda: executar_programa("temperatura.py"))
 btn1.pack(pady=5)
 
+
+btn2 = tk.Button(janela, text="Abrir Calculadora de IMC", width=20,
+                 command=lambda: executar_programa("calculadora_imc.py"))
+btn2.pack(pady=5)
+
 # Botão de Sair
 btn_sair = tk.Button(janela, text="Sair", width=20, fg="red", command=janela.quit)
 btn_sair.pack(pady=20)
