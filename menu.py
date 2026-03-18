@@ -32,6 +32,10 @@ btn2 = tk.Button(janela, text="Abrir Calculadora de IMC", width=20,
                  command=lambda: executar_programa("calculadora_imc.py"))
 btn2.pack(pady=5)
 
+btn3 = tk.Button(janela, text="Login", width=20,
+                 command=lambda: executar_programa("login_menu.py"))
+btn3.pack(pady=5)
+
 # Botão de Sair
 btn_sair = tk.Button(janela, text="Sair", width=20, fg="red", command=janela.quit)
 btn_sair.pack(pady=20)
