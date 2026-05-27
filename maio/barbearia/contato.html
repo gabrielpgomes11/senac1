@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Barbearia Progresso</title>
+		<link rel="stylesheet" href="./css/reset.css">
+		<link rel="stylesheet" href="./css/style.css">
+	</head>
+	<body>
+        <header>
+            <div class="caixa">
+                <h1><img src="./img/logo.png"></h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="produto.html">Produtos</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <form>
+                <label for ="nomesobrenome">Nome e Sobrenome:</label>
+                <input type="text" id="nomesobrenome" class="input-padrao" required>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" class="input-padrao" required placeholder="seuemail@dominio.com">
+                <label for="telefone">Telefone:</label>
+                <input type="telefone" id="telefone" class="input-padrao" required placeholder="(XX) XXXXX-XXXX">
+                <label for="mensagem">Mensagem:</label>
+                <input cols="70" rows="10" id="mensagem" class="input-padrao" required>
+
+                <fieldset>
+                    <legend>Preferência de contato:</legend>
+                    <label for="radio-email"><input type="radio" id="radio-email" name="contato" value="radio-email"> E-mail</label>
+                    <label for="radio-telefone"><input type="radio" id="radio-telefone" name="contato" value="radio-telefone"> Telefone</label>
+                    <label for="radio-whatsapp"><input type="radio" id="radio-whatsapp" name="contato" value="radio-whatsapp" checked> WhatsApp</label>
+                </fieldset>
+                <findset>
+                    <legend>Qual horário prefere ser atendido?</legend>
+                    <select>
+                        <option value="Manhã">Manhã</option>
+                        <option value="Tarde">Tarde</option>
+                        <option value="Noite">Noite</option>
+                    </select>
+                </findset>
+                <label><input type="checkbox" class="checkbox" checked> Deseja receber nossas novidades por e-mail?</label>
+                <input type="submit" value="Enviar formulário" class="enviar">
+
+               <table>
+                    <thead>
+                        <tr>
+                            <th>Dia</th>
+                            <th>Horário</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Segunda</td>
+                            <td>08:00 - 20:00</td>~
+                        </tr>
+                        <tr>
+                            <td>Terça</td>
+                            <td>08:00 - 20:00</td>
+                        </tr>
+                        <tr>
+                            <td>Quarta</td>
+                            <td>08:00 - 20:00</td>
+                        </tr>
+                        <tr>
+                            <td>Quinta</td>
+                            <td>08:00 - 20:00</td>
+                        </tr>
+                        <tr>
+                            <td>Sexta</td>
+                            <td>08:00 - 20:00</td>
+                        </tr>
+                        <tr>
+                            <td>Sábado</td>
+                            <td>06:00 - 14:00</td>
+                        </tr>
+                    </tbody>
+               </table>
+            </form> 
+        </main>
+    </body>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Document </title>
+    <link rel="stylesheet" href="/maio/pqp/css/tabela.css">
+    <style>
+        .destaque {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+    <style>
+        #titulo {
+            color: blue;
+            list-style-position: inside;
+        }
+    </style>
+</head>
+<body style="font-family: Verdana, Verdana, Geneva, Tahoma, sans-serif">
+    <div style="text-align: center;">
+        <img src="/maio/pqp/img/senac.png" alt="Logo do SENAC">
+    </div>
+    <section id="Quem somos">
+        <div style="text-align: justify;">
+            <h2>Transformando vidas há quase oito decadas </h2>
+            <p> Criado em 1947, o Serviço Nacional de Aprendizagem Comercial do Espírito Santo (Senac-ES) está consolidado como referência estadual em oferta de educação profissional nas áreas de Comércio de Bens, Serviços e Turismo, com opções de Formação Inicial e Continuada, cursos Técnicos e Pós-Graduação (EAD). </p>
+            <p> Nesse sentido, a instituição se dedica às atividades vinculadas à Confederação Nacional do Comércio (CNC), representada, no estado, por 24 sindicatos filiados à Federação do Comércio de Bens, Serviços e Turismo do Espírito Santo (Fecomércio-ES). </p>
+            <p> Transformando a vida da população capixaba, ao longo de quase oito décadas, o Senac-ES garante formação sólida e alinhada ao mercado de trabalho, com metodologias educacionais consolidadas pelo Departamento Nacional e aplicadas nos Departamentos Regionais.</p>
+        </div>
+    </section>
+    <section id= "Cursos">
+        <h2> Nossos Cursos</h2>
+        <table class="tabela">
+            <tr>
+                <th>Curso</th>
+                <th>Carga Horária</th>
+            </tr>
+            <tr>
+                <td>Técnico em Administração</td>
+                <td>800 horas</td>
+            </tr>
+            <tr>
+                <td>Técnico em Desenvolvimento de Sistemas</td>
+                <td>1200 horas</td>
+            </tr>
+            <tr>
+                <td>Técnico em Enfermagem</td>
+                <td>1600 horas</td>
+            </tr>
+            <tr>
+                <td>Técnico em Eventos</td>
+                <td>800 horas</td>
+            </tr>
+            <tr>
+                <td>Técnico em Guia de Turismo</td>
+                <td>800 horas</td>
+            </tr>
+        </table>
+    </section>
+    <section id= "Unidades">
+        <h2> Unidades </h2>
+        <ul>
+            <li> Vitória </li>
+            <li> Serra </li>
+            <li> Cachoeiro de Itapemirim </li>
+            <li> Venda Nova </li>
+            <li> Guarapari </li>
+        </ul>
+    </section>
+    <section id="Faleconosco">
+        <h2> Fale Conosco </h2>
+        <form action="#" method="post">
+            <table>
+                <tr>
+                    <td><label for="nome">Nome:</label></td>
+                    <td><input type="text" id="nome" name="nome" required></td>
+                </tr>
+                <tr>
+                    <td><label for="cpf">CPF:</label></td>
+                    <td><input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" required></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="email" id="email" name="email" required></td>
+                </tr>
+                <tr>
+                    <td><label for="contato">Contato:</label></td>
+                    <td><input type="text" id="contato" name="contato" placeholder="(00) 00000-0000" required></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Enviar"></td>
+                </tr>
+            </table>
+        </form>
+    </section>
+</body>
+</html>
