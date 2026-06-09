@@ -9,6 +9,7 @@
 	<body>
         <h1>Bem vindo ao JavaScript</h1>
         <script>
+/*
             let hora = "10";
             if (hora < 12) {
                 alert("Bom dia!");
@@ -21,6 +22,57 @@
             for (let i = 0; i < 5; i++) {
                 alert("Iteração " + i);
             }
+
+            function saudacao(nome) {
+                return "Olá, " + nome + "!";
+            }
+            alert(saudacao("Raphaella"));
+*/
+            
+/*
+            var totalFamiliares = parseint(prompt("Quantos familiares você tem?"));
+            var numero = 1;
+            var totalIdade = 0;
+            while (numero <= totalFamiliares) {
+                var idade = parseint(prompt("Qual a idade do familiar " + numero + "?"));
+                totalIdade += idade;
+                numero++;
+            }
+            var mediaIdade = totalIdade / totalFamiliares;
+            mostra("A média das idades é: " + mediaIdade);
+            mostra("Fim");
+*/
+            function pulalinha() {
+                document.write("<br>");
+            }
+            
+            function mostra(frase) {
+                document.write(frase);
+                pulalinha();
+            }
+            
+            function calcularIMC(peso, altura) {
+                return Math.round(peso / (altura * altura));
+            }
+
+
+            var nome = prompt("Qual é o seu nome?");
+            var altura = parseFloat(prompt("Qual é a sua altura em metros?"));
+            var peso = parseFloat(prompt("Qual é o seu peso em kg?"));
+            var imc = calcularIMC(peso, altura);
+            mostra("Olá, " + nome + "! Seu IMC é: " + imc);
+
+            if (imc < 18.5) {
+                mostra("Você está abaixo do peso.");
+            } else if (imc < 25) {
+                mostra("Você está com peso normal.");
+            } else if (imc < 30) {
+                mostra("Você está com sobrepeso.");
+            } else {
+                mostra("Você está com obesidade.");
+            }
+            
+            
         </script>
     </body>
 </html>
