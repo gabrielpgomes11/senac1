@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição - Receba Nosso Conteúdo Exclusivo</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --primary-hover: #1d4ed8;
+            --text-color: #1f2937;
+            --bg-color: #f3f4f6;
+            --card-bg: #ffffff;
+        }
+
+        {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            width: 100%;
+            max-width: 900px;
+        }
+
+        @media (min-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr 1fr;
+                align-items: center;
+            }
+        }
+
+        .headline h1 {
+            font-size: 2.5rem;
+            color: #111827;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .headline p {
+            font-size: 1.1rem;
+            color: #4b5563;
+            margin-bottom: 20px;
+        }
+
+        .features-list {
+            list-style: none;
+        }
+
+        .features-list li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+        }
+
+        .features-list li::before {
+            content: "✓";
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #374151;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-top: 5px;
+        }
+
+        .checkbox-group input {
+            margin-top: 4px;
+        }
+
+        .checkbox-group label {
+            font-size: 0.85rem;
+            font-weight: normal;
+            color: #4b5563;
+        }
+
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: var(--primary-hover);
+        }
+
+        button:disabled {
+            background-color: #9ca3af;
+            cursor: not-allowed;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.85rem;
+            color: #6b7280;
+            border-top: 1px solid #e5e7eb;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="container">
+        <div class="main-content">
+            <section class="headline">
+                <h1>Acelere seus resultados ainda esta semana.</h1>
+                <p>Inscreva-se abaixo para ter acesso exclusivo aos nossos materiais didáticos, ferramentas e atualizações semanais direto no seu e-mail.</p>
+                
+                <ul class="features-list">
+                    <li>E-books e templates gratuitos</li>
+                    <li>Artigos técnicos exclusivos</li>
+                    <li>Avisos em primeira mão</li>
+                </ul>
+            </section>
+
+            <section class="form-container">
+                <form id="lpForm">
+                    
+                    <div class="form-group">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" id="fnome" required autocomplete="name" placeholder="Ex: João Silva">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail Profissional</label>
+                        <input type="email" id="femail" required autocomplete="email" placeholder="Ex: joao@empresa.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefone">Telefone / WhatsApp</label>
+                        <input type="tel" id="ftelefone" autocomplete="tel" placeholder="Ex: (11) 99999-9999">
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="lgpd" required>
+                        <label for="lgpd">
+                            Estou de acordo com os <strong>Termos de Uso</strong> e <strong>Política de Privacidade</strong>. Aceito receber comunicações baseadas no meu interesse.
+                        </label>
+                    </div>
+
+                    <button type="submit" id="btnSubmit">Garantir Meu Acesso</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sua Empresa ou Projeto. Todos os direitos reservados. Em conformidade com a LGPD.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script>
+        // SUBSTITUA COMPLETA E EXATAMENTE COM AS CREDENCIAIS DO SEU PROJETO SUPABASE
+        // (Você encontra isso em Project Settings > API no painel do Supabase)
+
+        const SUPABASE_URL = "https://qhwgqvjepojthzlhejep.supabase.co";
+        const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFod2dxdmplcG9qdGh6bGhlamVwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzcwNDI5ODIsImV4cCI6MjA5MjYxODk4Mn0.Y4bVqjbG6GDnZCdGD-dRQVWxny-Y10riiqzrC3nQQok";
+
+        // Inicializa o cliente do Supabase
+        const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+
+        // Captura o formulário e o botão do HTML
+        const form = document.getElementById('lpForm');
+        const btnSubmit = document.getElementById('btnSubmit');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault(); // Impede a página de recarregar
+
+            // Desabilita o botão para evitar cliques duplicados durante o envio
+            btnSubmit.disabled = true;
+            btnSubmit.innerText = "Enviando...";
+
+            // Coleta os valores digitados nos inputs
+            const nomeCompleto = document.getElementById('fnome').value;
+            const emailContato = document.getElementById('femail').value;
+            const telefoneContato = document.getElementById('ftelefone').value;
+
+            try {
+                // Insere os dados na tabela do Supabase
+                // IMPORTANTE: Substitua 'nome_da_sua_tabela' pelo nome real da tabela criada no Supabase
+                const { data, error } = await _supabase
+                    .from('landingpage') 
+                    .insert([
+                        { 
+                            nomeL: nomeCompleto, 
+                            emailL: emailContato, 
+                            telefoneL: telefoneContato 
+                        }
+                    ]);
+
+                if (error) throw error;
+
+                // Sucesso!
+                alert('Cadastro realizado com sucesso!');
+                form.reset(); // Limpa os campos do formulário
+
+                // Opcional: Se você quiser liberar o download do PDF automaticamente após o cadastro:
+                // window.location.href = "seu-material-gratuito.pdf";
+
+            } catch (err) {
+                console.error("Erro ao salvar no Supabase:", err.message);
+                alert('Ocorreu um erro ao processar seu cadastro. Tente novamente.');
+            } finally {
+                // Reativa o botão após o término da operação
+                btnSubmit.disabled = false;
+                btnSubmit.innerText = "Garantir Meu Acesso";
+            }
+        });
+    </script>
+</body>
+</html>
