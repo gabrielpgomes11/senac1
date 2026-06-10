@@ -226,14 +226,18 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
     <script>
         // SUBSTITUA COMPLETA E EXATAMENTE COM AS CREDENCIAIS DO SEU PROJETO SUPABASE
         // (Você encontra isso em Project Settings > API no painel do Supabase)
-        const SUPABASE_URL = "SUA_SUPABASE_URL_AQUI";
-        const SUPABASE_ANON_KEY = "SUA_SUPABASE_ANON_KEY_AQUI";
+
+        const SUPABASE_URL = "https://qhwgqvjepojthzlhejep.supabase.co";
+        const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFod2dxdmplcG9qdGh6bGhlamVwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzcwNDI5ODIsImV4cCI6MjA5MjYxODk4Mn0.Y4bVqjbG6GDnZCdGD-dRQVWxny-Y10riiqzrC3nQQok";
 
         // Inicializa o cliente do Supabase
-        const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+        const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
 
         // Captura o formulário e o botão do HTML
         const form = document.getElementById('lpForm');
@@ -247,20 +251,20 @@
             btnSubmit.innerText = "Enviando...";
 
             // Coleta os valores digitados nos inputs
-            const nomeCompleto = document.getElementById('nome').value;
-            const emailContato = document.getElementById('email').value;
-            const telefoneContato = document.getElementById('telefone').value;
+            const nomeCompleto = document.getElementById('fnome').value;
+            const emailContato = document.getElementById('femail').value;
+            const telefoneContato = document.getElementById('ftelefone').value;
 
             try {
                 // Insere os dados na tabela do Supabase
                 // IMPORTANTE: Substitua 'nome_da_sua_tabela' pelo nome real da tabela criada no Supabase
-                const { data, error } = await supabase
-                    .from('nome_da_sua_tabela') 
+                const { data, error } = await _supabase
+                    .from('landingpage') 
                     .insert([
                         { 
-                            nome: nomeCompleto, 
-                            email: emailContato, 
-                            telefone: telefoneContato 
+                            nomeL: nomeCompleto, 
+                            emailL: emailContato, 
+                            telefoneL: telefoneContato 
                         }
                     ]);
 
