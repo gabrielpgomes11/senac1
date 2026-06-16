@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+        <title>CyberTech Store</title>
+    </head>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --primary-hover: #1d4ed8;
+            --text-color: #1f2937;
+            --bg-color: #f3f4f6;
+            --card-bg: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            width: 100%;
+            max-width: 900px;
+        }
+
+        @media (min-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr 1fr;
+                align-items: center;
+            }
+        }
+
+        .headline h1 {
+            font-size: 2.5rem;
+            color: #111827;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .headline p {
+            font-size: 1.1rem;
+            color: #4b5563;
+            margin-bottom: 20px;
+        }
+
+        .features-list {
+            list-style: none;
+        }
+
+        .features-list li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+        }
+
+        .features-list li::before {
+            content: "✓";
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #374151;
+        }
+        
+        input[type="cpf"],
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-top: 5px;
+        }
+
+        .checkbox-group input {
+            margin-top: 4px;
+        }
+
+        .checkbox-group label {
+            font-size: 0.85rem;
+            font-weight: normal;
+            color: #4b5563;
+        }
+
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: var(--primary-hover);
+        }
+
+        button:disabled {
+            background-color: #9ca3af;
+            cursor: not-allowed;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.85rem;
+            color: #6b7280;
+            border-top: 1px solid #e5e7eb;
+        }
+        @media screen and (max-width: 480px) {
+            .caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video {
+                width: auto;
+            }
+
+            h1 {
+                text-align: center;
+            }
+
+            nav {
+                position: static;
+            }
+
+            .lista-beneficios, .imagem-beneficios {
+                width: 100%;
+            }
+        }
+        .caixa {
+            position: relative;
+            width: 940px;
+            margin: 0 auto;
+        }
+        nav {
+            position: absolute;
+            top: 110px;
+            right: 0;
+        }
+
+        nav li {
+            display: inline;
+            margin: 0 0 0 15px;
+        }
+
+        nav a {
+            text-transform: uppercase;
+            color: #000000;
+            font-weight: bold;
+            font-size: 22px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #C78C19;
+            text-decoration: underline;
+        }
+        header{
+            background:#111;
+            border-bottom:3px solid #00bfff;
+        }
+        .redes a{
+            color:#00bfff;
+            text-decoration:none;
+        }
+
+        .redes a:hover{
+            color:white;
+        }
+    </style>
+	<body>
+        <header>
+            <div class="caixa">
+                <h1><img src="./img/logo.png"></h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html" style="color: #00bfff;">Home</a></li>
+                        <li><a href="produtos.html" style="color: #00bfff;">Produtos</a></li>
+                        <li><a href="landingpage.html" style="color: #00bfff;">Contato</a></li>
+                        <li><a href="carrinho.html" style="color: #00bfff;">Carrinho</a></li>
+                        <li><a href="login.html" style="color: #00bfff;">Login</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main class="container">
+            <div class="main-content">
+                <section class="headline">
+                    <h1>Acesse sua conta</h1>
+                    <p>Informe seus dados e acesse imediatamente, ou crie uma se não houver.</p>
+                </section>
+                <section class="form-container">
+                    <form id="lpForm">
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" required autocomplete="email" placeholder="Ex: joao@empresa.com">
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="telefone">Senha</label>
+                            <input type="tel" id="telefone" autocomplete="tel" placeholder="Ex: 12345678">
+                        </div>
+                        <div class="form-group">
+                            <label for="CPF">CPF</label>
+                            <input type="cpf" id="cpf" autocomplete="cpf" placeholder="Ex: 123.456.789.00">
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="lgpd" required>
+                            <label for="lgpd">
+                                Estou de acordo com os <strong>Termos de Uso</strong> e <strong>Política de Privacidade</strong>. Aceito receber comunicações baseadas no meu interesse.
+                            </label>
+                        </div>
+                        <button type="submit" id="btnSubmit">Entrar</button>
+                        <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;";><a href="esqueciasenha.html">Esqueci minha senha</a></p>
+                        <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;";><a href="criarconta.html">Criar conta</a></p>
+                </section>
+            </div>
+        </main>
+       
